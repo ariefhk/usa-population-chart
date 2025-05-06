@@ -1,11 +1,19 @@
-import HomePage from "../pages/home-page";
 import { RouteRootInterface } from "./route.types";
+import PopulationPage from "../pages/app/population-page";
+import AppLayout from "@/layouts/app-layout";
 
 const appRoutes: RouteRootInterface[] = [
   {
-    name: "home-page",
+    name: "app",
     path: "/",
-    component: HomePage,
+    component: AppLayout,
+    routes: [
+      {
+        name: "population-page",
+        path: "/",
+        component: PopulationPage,
+      },
+    ],
   },
 ];
 

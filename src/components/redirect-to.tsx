@@ -1,12 +1,12 @@
 import React from "react";
 import { Navigate } from "react-router";
 
-interface IRedirectToProps {
+interface RedirectToProps {
   to: string;
   isReplace?: boolean;
 }
 
-const RedirectTo: React.FC<IRedirectToProps> = ({ to, isReplace = false }) => {
+const RedirectTo: React.FC<RedirectToProps> = ({ to, isReplace = false }) => {
   return <Navigate to={to} replace={isReplace} />;
 };
 
